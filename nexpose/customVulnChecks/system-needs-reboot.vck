@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VulnerabilityCheck id="system-needs-reboot" scope="node">
+	<System>
+		<OS minCertainty="1.0" vendor="Microsoft">
+		</OS>
+	</System>
+	<WindowsRegistry>
+		<or>
+			<registryKey name="HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Updates\UpdateExeVolatile" mustNotBePresent="1">
+				<registryValue name="Flags" type="REG_DWORD">
+					<regex cflags="REG_ICASE">[1-9]</regex>
+				</registryValue>
+			</registryKey>
+			<registryKeyExists name="HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\RebootPending">
+			</registryKeyExists>
+			<registryKeyExists name="HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired">
+			</registryKeyExists>
+	  	</or>
+    </WindowsRegistry>
+</VulnerabilityCheck>

@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Vulnerability id="system-needs-reboot" published="2016-10-18" added="2016-10-18" modified="2016-10-22" version="2.0">
+  <name>system-needs-reboot</name>
+  <severity>0</severity>
+  <pci severity="0"/>
+  <Tags>
+    <tag>Microsoft</tag>
+    <tag>Windows</tag>
+    <tag>Update</tag>
+  </Tags>
+  <cvss>(AV:N/AC:L/Au:N/C:C/I:C/A:C)</cvss>
+  <AlternateIds>
+    <id name="URL">https://support.microsoft.com/en-us/kb/832475</id>
+  </AlternateIds>
+  <Description>
+    <p>
+      Version 6.1.22.0 and later versions of the package installer for Windows software 
+	  updates (Update.exe) support the following new features and changes:
+	  Flags set in the registry key
+		HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Updates\UpdateExeVolatile
+			to indicate when a restart is required after installation or removal of a 
+			software update such as a security update, critical update, or hotfix.
+			or
+			HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\RebootPending
+			or
+			HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired
+			keys exist
+      </p>
+  </Description>
+  <Solutions>
+    <Solution id="UPGRADE-SEP-VERSION-12-1-5" time="30m">
+      <summary>Reboot the system to apply pending updates</summary>
+      <workaround>
+        <p>
+         No workaround is available.
+        </p>
+      </workaround>
+    </Solution>
+  </Solutions>
+</Vulnerability>
