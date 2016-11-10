@@ -1,15 +1,15 @@
-
-
-
 Go-Live assessments Scripts and tools
+=====================================
 
 Powershell Script
+
 *Registry Checks
 *Group Policy Checks
 *Files System Checks
 
 Ruby Script
 -Preqs
+
 	*Ruby (https://www.ruby-lang.org/en/)
 	*Ruby Gems (https://rubygems.org/)
 	*Nexpose-client Gem (https://rubygems.org/gems/nexpose)
@@ -20,6 +20,7 @@ Ruby Script
 	
 	
 -Customize the script for your baseline and enviornment
+
 	*Add Console IP/hostname
 	*Add User Account
 	*Add SiteID
@@ -30,6 +31,7 @@ Ruby Script
 ocra scriptname.rb
 	
 -Order of Operations
+
 	*Scan
 	*Check Authentication
 	*Generate a report
