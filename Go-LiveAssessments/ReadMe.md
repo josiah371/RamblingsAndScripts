@@ -1,6 +1,3 @@
-
-
-
 Go-Live assessments Scripts and tools
 
 Powershell Script
