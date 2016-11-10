@@ -1,22 +1,22 @@
 Go-Live assessments Scripts and tools
 ======================================
 
--Powershell Script
+Powershell Script:
 
-	0.Registry Checks
-	0.Group Policy Checks
-	0.Files System Checks
+	1. Registry Checks
+	2. Group Policy Checks
+	3. Files System Checks
 
 Ruby Script
--Preqs:
+Preqs:
 
-	0.Ruby (https://www.ruby-lang.org/en/)
-	0.Ruby Gems (https://rubygems.org/)
-	0.Nexpose-client Gem (https://rubygems.org/gems/nexpose)
-	0.ocra Gem (https://rubygems.org/gems/ocra)
-	0.An account in Nexpose that can modify 1 site and launch a scan
-	0.Report format you want sent out after a run (we use a csv)
-	0.A site that will be used for scanning the assets (load the scope of assets into the site that you want to scan we use ranges of our enviornment)
+	1. Ruby (https://www.ruby-lang.org/en/)
+	2. Ruby Gems (https://rubygems.org/)
+	3. Nexpose-client Gem (https://rubygems.org/gems/nexpose)
+	4. ocra Gem (https://rubygems.org/gems/ocra)
+	5. An account in Nexpose that can modify 1 site and launch a scan
+	6. Report format you want sent out after a run (we use a csv)
+	7. A site that will be used for scanning the assets (load the scope of assets into the site that you want to scan we use ranges of our enviornment)
 	
 	
 -Customize the script for your baseline and enviornment
