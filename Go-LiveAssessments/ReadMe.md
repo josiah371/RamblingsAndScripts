@@ -19,7 +19,8 @@ Preqs:
 	7. A site that will be used for scanning the assets (load the scope of assets into the site that you want to scan we use ranges of our enviornment)
 	
 	
--Customize the script for your baseline and enviornment
+Customize the script for your baseline and enviornment
+
 	*Add Console IP/hostname
 	*Add User Account
 	*Add SiteID
