@@ -2,12 +2,14 @@ Go-Live assessments Scripts and tools
 ======================================
 
 -Powershell Script
-*Registry Checks
-*Group Policy Checks
-*Files System Checks
+
+	0.Registry Checks
+	0.Group Policy Checks
+	0.Files System Checks
 
 Ruby Script
--Preqs
+-Preqs:
+
 	0.Ruby (https://www.ruby-lang.org/en/)
 	0.Ruby Gems (https://rubygems.org/)
 	0.Nexpose-client Gem (https://rubygems.org/gems/nexpose)
