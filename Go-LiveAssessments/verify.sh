@@ -261,34 +261,34 @@ valChrony() {
 	[[ ${chronstat} == "running" ]] && printPassed || { printFailed; return 1; }
 	
 	
-	printf "  Chrony using time.catholichealth.net..." | tee -a $outFile
+	printf "  Chrony using time.yourcompany.net..." | tee -a $outFile
 
 	if [[ -f /etc/chrony.conf ]]; then	
-		ser=$(grep -i catholichealth /etc/chrony.conf)
+		ser=$(grep -i yourcompany /etc/chrony.conf)
 	elif [[ -f /etc/chrony/chrony.conf ]]; then
-		ser=$(grep -i catholichealth /etc/chrony/chrony.conf)
+		ser=$(grep -i yourcompany /etc/chrony/chrony.conf)
 	else
 		printFailed;
 		return 1;
 	fi
 	[[ ${#ser} > 0 ]] && printPassed || { printFailed; return 1; }
 	
-	ntphost=$(getent hosts time.catholichealth.net | sed 's/\([0-9\.]*\).*/\1/')
+	ntphost=$(getent hosts time.yourcompany.net | sed 's/\([0-9\.]*\).*/\1/')
 	chrsync=$(chronyc tracking | grep Reference | awk -F' ' '{print $4}')
-	printf "  Checking if Chrony is communicating with time.catholichealth.net..." | tee -a $outFile
+	printf "  Checking if Chrony is communicating with time.yourcompany.net..." | tee -a $outFile
 	[[ ${ntphost}=${chrsync} ]] && printPassed || printFailed
 }
 
 valNTP() {
 	printPF '=' "NTP Stauts" $1 "running"
 	
-	ser=$(grep -i catholichealth /etc/ntp.conf)
-	printf "  NTP using time.catholichealth.net..." | tee -a $outFile
+	ser=$(grep -i yourcompany /etc/ntp.conf)
+	printf "  NTP using time.yourcompany.net" | tee -a $outFile
 	[[ ${#ser} > 0 ]] && printPassed || { printFailed; return 1; }
 
-	ntphost=$(getent hosts time.catholichealth.net | sed 's/\([0-9\.]*\).*/\1/')
+	ntphost=$(getent hosts time.yourcompany.net | sed 's/\([0-9\.]*\).*/\1/')
 	ntpdRunning=$(ntpq -p 2>/dev/null | grep ${ntphost})
-	printf "  Checking if NTPD is communicating with time.catholichealth.net..." | tee -a $outFile
+	printf "  Checking if NTPD is communicating with time.yourcompany.net..." | tee -a $outFile
 	[[ ${#ntpdRunning} > 0 ]] && printPassed || printFailed
 }
 
